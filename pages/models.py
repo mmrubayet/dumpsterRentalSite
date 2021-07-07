@@ -11,7 +11,12 @@ class State(models.Model):
     def __str__(self):
         return self.name
 
-    
+    def get_absolute_url(self):
+        return reverse('state_detail', args=[str(self.id)])
+
+# class City(models)
+
+
 class Faq(models.Model):
     question    = models.CharField(max_length=500)
     author      = models.ForeignKey(
