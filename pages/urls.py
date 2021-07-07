@@ -19,6 +19,6 @@ urlpatterns = [
     path('faqs/', FAQPageView.as_view(), name='faqs'),
     path('contact/', ContactPageView.as_view(), name='contact'),
 
-    path('<int:pk>', StateDetailView.as_view(), name='state_detail'),
+    path('<slug:slug>', StateDetailView.as_view(), name='state_detail'),
 
 ]
