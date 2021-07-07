@@ -4,8 +4,27 @@
 <div>
   <div class="container py-5">
 
-    <h1 class="display-2">Frequently Asked Questions</h1>
-    <p class="lead">Here are some answers of question we often asked by</p>
+    <div class="container jumbotron" id="jumbo">
+      <h1 class="display-2">Frequently Asked Questions</h1>
+      <p class="lead">Here are some answers of question we often asked by our valuable customers:</p>
+      <br><br>
+
+      {% for faqs in all_faqs_list %}
+
+      <div class="container">
+
+        <div class="card border-0">
+          <h2 class="card-header border-0">{{ faqs.question }}</h2>
+          <div class="card-body">
+            <p class="card-text">{{ faqs.answer }}</p>
+          </div>
+        </div>
+
+        <br>
+      </div>
+
+      {% endfor %}
+    </div>
 
   </div>
 </div>
