@@ -5,20 +5,12 @@
 }
 
 .states:hover {
-  text-decoration: none !important;
+  text-decoration: none;
   color: grey !important;
 }
 
-.states ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: .9em;
-  font-family: 'Roboto', sans-serif;
-}
-
-.states ul li a:hover {
-  text-decoration: none;
-  color: grey !important;
+.nomark ul {
+  list-style: none; margin: 0; padding: 0;
 }
 
 #jumbo {

@@ -92,14 +92,15 @@
 
       {% for states in state_articles %}
       <div class="container ">
-        <a href="#">
         <div class="card border-0 ">
-          <h2 class="card-header border-0 states ">{{ states.name }}</h2>
+          <a class="states" href="#">
+            <h2 class="card-header border-0 states ">{{ states.name }}</h2>
+          </a>
           <div class="card-body">
-            <p class="card-text states">{{ states.article|truncatewords:18 }}</p>
+            <p class="card-text">{{ states.article|truncatewords:18 }}</p>
           </div>
         </div>
-        </a>
+
 
         <br>
       </div>
