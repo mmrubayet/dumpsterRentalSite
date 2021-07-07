@@ -2,6 +2,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<!-- main div -->
 <div>
   <div class="container py-5">
 
@@ -76,7 +77,38 @@
 
   </section>
   <!-- services ends -->
-</div>
 
+  <!-- states viewer -->
+  <section>
+    <div class="container jumbotron" id="jumbo">
+
+      <div class="container ">
+        <h1 class="">States we serve</h1>
+        <br><br>
+      </div>
+
+      <!-- state list -->
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-3 states">
+            <ul class="nomark" style="list-style: none; margin: 0; padding: 0; ">
+              {% for states in object_list  %}
+              <li> <a href="{{ states.get_absolute_url }}"> {{ states.name }} </a> </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+      <!-- state list ends -->
+
+    </div>
+  </section>
+  <!-- states viewer ends -->
+
+</div>
+<!-- main div ends -->
 
 {% endblock content %}

@@ -1,17 +1,27 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 
 from .models import Faq, State
 
 
-class IndexView(TemplateView):
+class IndexView(ListView):
+    model = State
+    queryset = model.objects.all().order_by('name')
     template_name = 'index.html'
 
-def HomePageView(request):
-    # template_name = 'home.html'
-    qs = State.objects.all().values_list('name', named=True).order_by('name')
-    context = {'all_states_list': qs}
-    return render(request, 'home.html', context)
+
+class StateDetailView(DetailView):
+    model = State
+    template_name = 'state_detail.html'
+
+
+class HomePageView(ListView):
+    model = State
+    queryset = model.objects.all().order_by('name')
+    template_name = 'home.html'
+    # qs = State.objects.all().values_list('name', named=True).order_by('name')
+    # context = {'all_states_list': qs}
+    # return render(request, 'home.html', context)
 
 
 def ServicesPageView(request):

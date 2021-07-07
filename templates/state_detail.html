@@ -1,0 +1,28 @@
+<!-- templates/state_detail.html -->
+{% extends 'base.html' %}
+{% block content %}
+<div>
+  <div class="container py-5">
+
+    <div class="container jumbotron" id="jumbo">
+      <h1 class="display-2">Dumpster Rental in {{ object.name }}</h1>
+      <p class="lead">Your complete satisfaction is our top priority.</p>
+      <br><br>
+
+      <div class="container">
+
+        <div class="card border-0">
+          <h2 class="card-header border-0">Need Dumpster in {{ object.name }} ?</h2>
+          <div class="card-body">
+            <p class="card-text">{{ object.article }}</p>
+          </div>
+        </div>
+
+        <br>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+{% endblock content %}
