@@ -14,7 +14,7 @@ class IndexView(TemplateView):
 
 def HomePageView(request):
     # template_name = 'home.html'
-    qs = State.objects.all()
+    qs = State.objects.all().values_list('name', named=True).order_by('name')
     context = {'all_states_list': qs}
     return render(request, 'home.html', context)
 
