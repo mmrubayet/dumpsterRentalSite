@@ -24,7 +24,7 @@
   <header>
     <!-- Start top -->
     <nav class="navbar navbar-expand-md navbar-fixed-top default navbar-light bg-light">
-      <a class="navbar-brand" href="{% url 'home' %}">SITE _ LOGO <img src="" alt=""> </a>
+      <a class="navbar-brand" href="{% url 'index' %}">SITE _ LOGO <img src="" alt=""> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -47,7 +47,7 @@
             <a class="nav-link" href="{% url 'contact' %}">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Call Now 80380</a>
+            <a class="nav-link" href="tel:80380">Call Now 80380</a>
           </li>
           {# <li class="nav-item"></li> #}
         </ul>
@@ -61,22 +61,24 @@
 
   </header>
 
-  {# <h1>Hello!</h1> #}
-  <div class="container-fluid ">
+  <div style="background: url({% static 'image/dumpster.jpg' %}) no-repeat; background-size: cover;" class="page-holder bg-cover img-fluid mx-auto d-block">
+
     {% block content %}
     {% endblock content %}
+
   </div>
 
 
 
-  <footer class="container-fluid bg-grey py-5">
+  <footer class=" fixed-bottom container-fluid bg-grey py-5 ">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
           <div class="row">
             <div class="col-md-6 ">
               <div class="logo-part">
-                <img src="https://i.ibb.co/sHZz13b/logo.png" class="w-50 logo-footer">
+                <!-- <img src="https://i.ibb.co/sHZz13b/logo.png" class="w-50 logo-footer"> -->
+                <h3>SITE_LOGO</h3>
                 <p>7637 Laurel Dr. King Of Prussia, PA 19406</p>
                 <p>Use this tool as test data for an automated system or find your next pen</p>
               </div>
