@@ -4,6 +4,7 @@
 
 {% block content %}
 
+<!-- main div -->
 <div>
   <div class="container py-5">
 
@@ -79,27 +80,37 @@
   </section>
   <!-- services ends -->
 
-  <!-- state list -->
+  <!-- states viewer -->
   <section>
-    <div class="container py-5">
+    <div class="container jumbotron" id="jumbo">
 
-      <div class="container " id="jumbo">
+      <div class="container ">
         <h1 class="">States we serve</h1>
-
         <br><br>
-
-        {% for states in all_states_list %}
-
-        <p>{{ states.name }}</p>
-
-        {% endfor %}
       </div>
 
+      <!-- state list -->
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-3 states">
+            <ul style="list-style: none; margin: 0; padding: 0; text-decoration: none">
+              {% for states in all_states_list %}
+              <li> <a href="#"> {{ states.name }} </a> </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+      <!-- state list ends -->
+
     </div>
-
   </section>
+  <!-- states viewer ends -->
 
-  <!-- state list ends -->
 </div>
+<!-- main div ends -->
 
 {% endblock content %}

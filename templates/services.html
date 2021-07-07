@@ -14,6 +14,7 @@
 
   </div>
   <!-- services section -->
+
   <section>
     <div class="container">
 
@@ -74,6 +75,46 @@
     </div>
 
   </section>
-  <!-- services ends -->
+
+  <!-- services section ends -->
+
+
+  <!-- states section -->
+
+  <section>
+
+    <div class="container jumbotron" id="jumbo">
+      <div class="container text-center">
+        <h1 class="display-4 "> See all states we serve</h1>
+        <p class="lead">We serve acrros all states all of the major cities. Please go through the list below.</p>
+        <br><br>
+      </div>
+
+      {% for states in state_articles %}
+      <div class="container ">
+        <a href="#">
+        <div class="card border-0 ">
+          <h2 class="card-header border-0 states ">{{ states.name }}</h2>
+          <div class="card-body">
+            <p class="card-text states">{{ states.article|truncatewords:18 }}</p>
+          </div>
+        </div>
+        </a>
+
+        <br>
+      </div>
+
+      {% endfor %}
+    </div>
+
+  </section>
+
+
+  <!-- states section ends -->
+
+
+
+
+
 </div>
 {% endblock content %}

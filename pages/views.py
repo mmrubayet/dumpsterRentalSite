@@ -3,11 +3,6 @@ from django.views.generic import TemplateView, ListView
 
 from .models import Faq, State
 
-class HomeStatesView(ListView):
-    model = State
-    template_name = 'home.html'
-    context_object_name = 'all_states_list'
-
 
 class IndexView(TemplateView):
     template_name = 'index.html'
@@ -19,11 +14,16 @@ def HomePageView(request):
     return render(request, 'home.html', context)
 
 
+def ServicesPageView(request):
+    # template_name = 'services.html'
+    state_art = State.objects.all().values_list('name', 'article', named=True).order_by('name')
+    context = {'state_articles': state_art}
+    return render(request, 'services.html', context)
+
+
 class AboutPageView(TemplateView):
     template_name = 'about.html'
 
-class ServicesPageView(TemplateView):
-    template_name = 'services.html'
 
 class FAQPageView(ListView):
     model = Faq
