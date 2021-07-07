@@ -1,12 +1,23 @@
+from django.shortcuts import render
 from django.views.generic import TemplateView, ListView
 
-from .models import Faq
+from .models import Faq, State
+
+class HomeStatesView(ListView):
+    model = State
+    template_name = 'home.html'
+    context_object_name = 'all_states_list'
+
 
 class IndexView(TemplateView):
     template_name = 'index.html'
 
-class HomePageView(TemplateView):
-    template_name = 'home.html'
+def HomePageView(request):
+    # template_name = 'home.html'
+    qs = State.objects.all()
+    context = {'all_states_list': qs}
+    return render(request, 'home.html', context)
+
 
 class AboutPageView(TemplateView):
     template_name = 'about.html'
