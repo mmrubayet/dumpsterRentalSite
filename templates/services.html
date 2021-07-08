@@ -78,11 +78,8 @@
 
   <!-- services section ends -->
 
-
   <!-- states section -->
-
   <section>
-
     <div class="container jumbotron" id="jumbo">
       <div class="container text-center">
         <h1 class="display-4 "> See all states we serve</h1>
@@ -90,10 +87,10 @@
         <br><br>
       </div>
 
-      {% for states in state_articles %}
+      {% for states in object_list %}
       <div class="container ">
         <div class="card border-0 ">
-          <a class="states" href="#">
+          <a class="states" href="{{ states.get_absolute_url }}">
             <h2 class="card-header border-0 states ">{{ states.name }}</h2>
           </a>
           <div class="card-body">

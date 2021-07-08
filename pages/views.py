@@ -24,11 +24,13 @@ class HomePageView(ListView):
     # return render(request, 'home.html', context)
 
 
-def ServicesPageView(request):
-    # template_name = 'services.html'
-    state_art = State.objects.all().values_list('name', 'article', named=True).order_by('name')
-    context = {'state_articles': state_art}
-    return render(request, 'services.html', context)
+class ServicesPageView(ListView):
+    model = State
+    queryset = model.objects.all().order_by('name')
+    template_name = 'services.html'
+    # state_art = State.objects.all().values_list('name', 'article', named=True).order_by('name')
+    # context = {'state_articles': state_art}
+    # return render(request, 'services.html', context)
 
 
 class AboutPageView(TemplateView):
