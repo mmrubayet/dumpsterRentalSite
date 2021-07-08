@@ -23,7 +23,14 @@ class State(models.Model):
 
 
 # class City(models.Model):
-#     name    =
+#     city_name   = models.CharField(max_length=50)
+#     # state_name  = models.ForeignKey('state.name', on_delete=models.CASCADE,)
+#     zip         = models.CharField(max_length=5, unique=True)
+#     city_detail = models.TextField(null=False)
+#     slug        = models.SlugField(null=False, unique=True)
+#
+#     def __str__(self):
+#         return self.city_name
 
 
 class Faq(models.Model):
