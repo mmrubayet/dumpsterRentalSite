@@ -23,8 +23,8 @@ class State(models.Model):
 
 
 class City(models.Model):
+    state_name  = models.ForeignKey('state.State', on_delete=models.CASCADE, related_name='cities')
     city_name   = models.CharField(max_length=50)
-    state_name  = models.ForeignKey('State', on_delete=models.CASCADE,)
     zip         = models.CharField(max_length=10, )
     city_detail = models.TextField(null=False)
     slug        = models.SlugField(null=False, unique=True)

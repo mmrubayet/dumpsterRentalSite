@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView
 
 from .models import Faq
-from state.models import State
+from state.models import State, City
 
 
 class IndexView(ListView):
@@ -17,10 +17,25 @@ class HomePageView(ListView):
     template_name = 'home.html'
 
 
+# class StateDetailView(DetailView):
+#     model = State
+#     template_name = 'state_detail.html'
+
 class StateDetailView(DetailView):
-    model = State
+    # model = State
+    context_object_name = 'state_detail_city'
     template_name = 'state_detail.html'
-        
+    queryset = State.objects.all()
+
+    def get_context_data(self, **kwargs):
+        context = super(StateDetailView, self).get_context_data(**kwargs)
+        context['states'] = State.objects.all()
+        context['cities'] = City.objects.all()
+        # print(City.objects.all())
+        # print([city.city_name for city in context['cities']])
+        # print(context['object'])
+        return context
+
 
 class ServicesPageView(ListView):
     model = State
