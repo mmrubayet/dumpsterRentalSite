@@ -20,3 +20,22 @@ class State(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         return super().save(*args, **kwargs)
+
+
+class City(models.Model):
+    city_name   = models.CharField(max_length=50)
+    state_name  = models.ForeignKey('State', on_delete=models.CASCADE,)
+    zip         = models.CharField(max_length=5, unique=True)
+    city_detail = models.TextField(null=False)
+    slug        = models.SlugField(null=False, unique=True)
+
+    def __str__(self):
+        return self.city_name
+
+    def get_absolute_url(self):
+        return reverse('city_detail', kwargs={'slug': self.slug})
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        return super().save(*args, **kwargs)
