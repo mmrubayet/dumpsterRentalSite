@@ -5,10 +5,10 @@ from django.urls import reverse
 
 
 class State(models.Model):
-    name    = models.CharField(max_length=100, unique=True)
-    abbvr   = models.CharField(max_length=2, unique=True)
-    article = models.TextField(null=False)
-    slug    = models.SlugField(null=False, unique=True)
+    name        = models.CharField(max_length=100, unique=True)
+    abbvr       = models.CharField(max_length=2, unique=True)
+    article     = models.TextField(null=False)
+    slug   = models.SlugField(null=False, unique=True)
 
     def __str__(self):
         return self.name
@@ -27,7 +27,7 @@ class City(models.Model):
     city_name   = models.CharField(max_length=50)
     zip         = models.CharField(max_length=10, )
     city_detail = models.TextField(null=False)
-    slug        = models.SlugField(null=False, unique=True)
+    slug   = models.SlugField(null=False, unique=True)
 
     def __str__(self):
         return self.city_name

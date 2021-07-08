@@ -22,7 +22,6 @@ class HomePageView(ListView):
 #     template_name = 'state_detail.html'
 
 class StateDetailView(DetailView):
-    # model = State
     context_object_name = 'state_detail_city'
     template_name = 'state_detail.html'
     queryset = State.objects.all()
@@ -35,6 +34,10 @@ class StateDetailView(DetailView):
         # print([city.city_name for city in context['cities']])
         # print(context['object'])
         return context
+
+class CityDetailView(DetailView):
+    model = City
+    template_name = 'city_detail.html'
 
 
 class ServicesPageView(ListView):

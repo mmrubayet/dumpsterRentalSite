@@ -9,6 +9,7 @@ from .views import (
     ContactPageView,
 
     StateDetailView,
+    CityDetailView,
     )
 
 urlpatterns = [
@@ -20,5 +21,6 @@ urlpatterns = [
     path('contact/', ContactPageView.as_view(), name='contact'),
 
     path('<slug:slug>', StateDetailView.as_view(), name='state_detail'),
+    path('city/<slug:slug>', CityDetailView.as_view(), name='city_detail'),
 
 ]

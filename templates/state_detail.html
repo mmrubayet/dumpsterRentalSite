@@ -38,7 +38,7 @@
                     {% for city in object.cities.all  %}
                     {# {% if object.name == city.state_name %} #}
 
-                    <li> <a href="#"> {{ city.city_name }}, {{ city.state_name }} </a> </li>
+                    <li> <a href="{{ city.get_absolute_url }}"> {{ city.city_name }}, {{ city.state_name }} </a> </li>
                     {# {% endif %} #}
 
                     {% endfor %}
