@@ -12,13 +12,44 @@
       <div class="container">
 
         <div class="card border-0">
-          <h2 class="card-header border-0">Need Dumpster in {{ object.name }} ?</h2>
+          <h1 class="card-header border-0">Need Dumpster in {{ object.name }} ?</h1>
           <div class="card-body">
             <p class="card-text">{{ object.article }}</p>
           </div>
         </div>
 
-        <br>
+
+
+        <!-- city viewer -->
+        <section>
+          <div class="container row" id="">
+
+            <div class="container ">
+              <h2 class="">Cities we serve</h2>
+              <br><br>
+            </div>
+
+            <!-- city list -->
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-3 states">
+                  <ul class="nomark" style="list-style: none; margin: 0; padding: 0; ">
+                    {% for states in object_list  %}
+                    <li> <a href="{{ states.get_absolute_url }}"> {{ states.name }} </a> </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+
+
+              </div>
+            </div>
+            <!-- city list ends -->
+
+          </div>
+        </section>
+        <!-- city viewer ends -->
+
       </div>
 
     </div>
