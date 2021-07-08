@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView
 
-from .models import Faq, State
+from .models import Faq
+from state.models import State
 
 
 class IndexView(ListView):
