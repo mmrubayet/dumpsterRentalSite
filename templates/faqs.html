@@ -9,14 +9,18 @@
       <p class="lead">Here are some answers of question we often asked by our valuable customers:</p>
       <br><br>
 
-      {% for faqs in all_faqs_list %}
+      {% for faq in object_list %}
 
       <div class="container">
 
         <div class="card border-0">
-          <h2 class="card-header border-0">{{ faqs.question }}</h2>
+
+          <a class="states" href=" {% url 'faq_detail' faq.pk %}">
+            <h2 class="card-header border-0">{{ faq.question }} </h2>
+          </a>
+
           <div class="card-body">
-            <p class="card-text">{{ faqs.answer|safe }}</p>
+            <p class="card-text">{{ faq.answer|safe }}</p>
           </div>
         </div>
 

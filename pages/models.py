@@ -17,3 +17,6 @@ class Faq(models.Model):
 
     def __str__(self):
         return self.question
+
+    def get_absolute_url(self):
+        return reverse('faq_detail', args=[str(self.id)])

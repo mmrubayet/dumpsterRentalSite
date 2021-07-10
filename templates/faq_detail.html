@@ -1,5 +1,27 @@
-<!-- state_detail.html -->
+<!-- templates/faq_detail.html -->
+{% extends 'base.html' %}
+{% block content %}
 <div>
-  <h2>{{ faqs.question }}</h2>
-  <p>{{ faqs.answer }}</p>
+  <div class="container py-5">
+
+    <div class="container jumbotron" id="jumbo">
+      <h1 class="display-2">Frequently Asked Questions</h1>
+      {# <p class="lead">Your complete satisfaction is our top priority.</p> #}
+      <br><br>
+
+      <div class="container">
+
+        <div class="card border-0">
+          <h1 class="card-header border-0"> {{ faq.question }} </h1>
+          <div class="card-body">
+            <p class="card-text">{{ faq.answer|safe }}</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 </div>
+{% endblock content %}

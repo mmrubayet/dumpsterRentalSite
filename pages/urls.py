@@ -8,6 +8,7 @@ from .views import (
     FAQPageView,
     ContactPageView,
 
+    FAQDetailView,
     StateDetailView,
     CityDetailView,
     )
@@ -18,6 +19,7 @@ urlpatterns = [
     path('about/', AboutPageView.as_view(), name='about'),
     path('services/', ServicesPageView.as_view(), name='services'),
     path('faqs/', FAQPageView.as_view(), name='faqs'),
+    path('faqs/<int:pk>/', FAQDetailView.as_view(), name='faq_detail'),
     path('contact/', ContactPageView.as_view(), name='contact'),
 
     path('<slug:slug>', StateDetailView.as_view(), name='state_detail'),

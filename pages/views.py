@@ -53,7 +53,13 @@ class AboutPageView(TemplateView):
 class FAQPageView(ListView):
     model = Faq
     template_name = 'faqs.html'
-    context_object_name = 'all_faqs_list'
+    # context_object_name = 'all_faqs_list'
+
+
+class FAQDetailView(DetailView):
+    model = Faq
+    template_name = 'faq_detail.html'
+    # context_object_name = 'all_faqs_list'
 
 
 class ContactPageView(TemplateView):
