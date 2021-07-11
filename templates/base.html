@@ -64,14 +64,14 @@
             <div class="col-xl-10 col-lg-8 col-md-8 col-sm-9">
               <div class="menu-area">
                 <!-- <div class="limit-box"> -->
-                  <nav class="main-menu ">
-                    <ul class="menu-area-main">
+                <nav class="main-menu ">
+                  <ul class="menu-area-main">
 
-                      <li> <a href="{% url 'contact' %}">Call Now </a> </li>
+                    <li> <a href="{% url 'contact' %}">Call Now </a> </li>
 
-                      <!-- <li> <a href="#"><img src="icon/icon_b.png" alt="#" /></a></li> -->
-                    </ul>
-                  </nav>
+                    <!-- <li> <a href="#"><img src="icon/icon_b.png" alt="#" /></a></li> -->
+                  </ul>
+                </nav>
                 <!-- </div> -->
               </div>
             </div>
@@ -122,6 +122,118 @@
   </header>
 
 
+  <!-- slider section -->
+
+  <section class="slider_section">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <!-- carousel-inner -->
+        <div class="carousel-item active">
+
+          <div class="container-fluid padding_dd">
+            <div class="carousel-caption">
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                  <div class="text-bg">
+                    <span>Welcome To OUR SITE 1</span>
+                    <h1>Dumpster Rental</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal </p>
+                    <form class="Vegetable">
+                      <input class="Vegetable_fom" placeholder="Find City" type="text" name="city_finder">
+                      <button class="Search_btn">Search</button>
+                    </form>
+                    <a href="#">Contact Us</a> <a href="#">Call Now</a>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                  <div class="images_box">
+                    <figure><img src="{% static 'images/img2.png' %}"></figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+
+          <div class="container-fluid padding_dd">
+            <div class="carousel-caption">
+
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                  <div class="text-bg">
+                    <span>Welcome To OUR SITE 2</span>
+                    <h1>Dumpster Rental</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal </p>
+                    <form class="Vegetable">
+                      <input class="Vegetable_fom" placeholder="Find City" type="text" name=" Vegetable">
+                      <button class="Search_btn">Search</button>
+                    </form>
+                    <a href="#">Contact Us</a> <a href="#">Call Now</a>
+                  </div>
+                </div>
+
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                  <div class="images_box">
+                    <figure><img src="{% static 'images/img2.png' %}"></figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="carousel-item">
+
+          <div class="container-fluid padding_dd">
+            <div class="carousel-caption ">
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                  <div class="text-bg">
+                    <span>Welcome To OUR SITE 3</span>
+                    <h1>Dumpster Rental</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal </p>
+                    <form class="Vegetable">
+                      <input class="Vegetable_fom" placeholder="Find City" type="text" name=" Vegetable">
+                      <button class="Search_btn">Search</button>
+                    </form>
+                    <a href="#">Contact Us</a> <a href="#">Call Now</a>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                  <div class="images_box">
+                    <figure><img src="{% static 'images/img2.png' %}"></figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- carousel-inner ends -->
+
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- slider section ends-->
 
   {% block content %}
   {% endblock content %}
@@ -305,15 +417,15 @@
   <!-- New JS files -->
 
   <!-- Javascript files-->
-          <script src="{% static 'js/jquery.min.js' %}"></script>
-          <script src="{% static 'js/popper.min.js' %}"></script>
-          <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-          <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
-          <script src="{% static 'js/plugin.js' %}"></script>
-          <!-- sidebar -->
-          <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
-          <script src="{% static 'js/custom.js' %}"></script>
-          <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+  <script src="{% static 'js/plugin.js' %}"></script>
+  <!-- sidebar -->
+  <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+  <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 
   <!-- New JS files ends -->
 
