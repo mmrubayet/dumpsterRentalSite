@@ -182,7 +182,7 @@ section {
 }
 
 .wrap:hover {
-  background: linear-gradient(135deg, #6394ff 0%, #0a193b 100%);
+  background: linear-gradient(135deg, #04cf3a 10%, #103b1b 100%);
   color: white;
 }
 
@@ -231,6 +231,8 @@ p {
 }
 
 /* services ends */
+
+
 /* contact page */
 font-family: 'Roboto', sans-serif;
 
