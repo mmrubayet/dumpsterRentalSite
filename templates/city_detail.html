@@ -14,7 +14,7 @@
         <div class="card border-0">
           <h1 class="card-header border-0">Need Dumpster in {{ city.city_name }}, {{ city.state_name }}, {{ city.zip }}  ?</h1>
           <div class="card-body">
-            <p class="card-text">{{ city.city_detail }}</p>
+            <p class="card-text">{{ city.city_detail|safe }}</p>
           </div>
         </div>
 
