@@ -46,25 +46,25 @@
      font-weight: normal;
      line-height: normal;
      color: #111111;
-     margin: 0 
+     margin: 0
 }
  h1 {
-     font-size: 24px 
+     font-size: 24px
 }
  h2 {
-     font-size: 22px 
+     font-size: 22px
 }
  h3 {
-     font-size: 18px 
+     font-size: 18px
 }
  h4 {
-     font-size: 16px 
+     font-size: 16px
 }
  h5 {
-     font-size: 14px 
+     font-size: 14px
 }
  h6 {
-     font-size: 13px 
+     font-size: 13px
 }
  *, *::after, *::before {
      -webkit-box-sizing: border-box;
@@ -74,7 +74,7 @@
  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
      color: #212121;
      text-decoration: none!important;
-     opacity: 1 
+     opacity: 1
 }
  button:focus {
      outline: none;
@@ -347,7 +347,7 @@
 }
  .logo {
      float: left;
-     
+
      padding-bottom: 6px;
 }
  nav.main-menu {
@@ -356,7 +356,7 @@
      margin-left: 0;
 }
 
- 
+
  .right_cart_section {
      float: right;
      width: auto;
@@ -883,7 +883,7 @@
 }
  .main-menu ul li:first-child {
      margin-left: 0;
-    
+
 }
  .main-menu ul>li>ul {
      opacity: 0;
@@ -956,7 +956,7 @@
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
  .menu-area {
     float: right;
-    
+
 }
 
 
@@ -989,9 +989,9 @@ width: 24%;
  .padding_left0 {
     padding-left: 0px;
 }
- 
+
  .header {
-   
+
      z-index: 999;
      width: 100%;
      padding: 20px 30px 20px 30px;
@@ -1091,7 +1091,7 @@ margin-right: 10px;
      width: 100%;
      bottom: auto;
      padding: 0;
-     margin-top: 90px 
+     margin-top: 90px
 }
  .img_bg {
      text-align: center;
@@ -1116,7 +1116,7 @@ margin-right: 10px;
      line-height: 58px;
      color: #fff;
 }
- 
+
  .black_nolmal {
      font-weight: normal;
      color: #000;
@@ -1134,7 +1134,7 @@ margin-right: 10px;
  .about {
      background-color: #fff;
      box-shadow: #ddd 0px 0px 13px 5px;
-     margin: 90px 30px 20px 30px;     
+     margin: 90px 30px 20px 30px;
 }
  .about .about-box {
 text-align: left;
@@ -1142,7 +1142,7 @@ float: right;
 width: 100%;
 max-width: 539px;
 padding: 40px 0;
-    
+
 }
 
 
@@ -1191,7 +1191,7 @@ border-radius: 30px;
  }
 
 
- .about .about-box a:hover{ 
+ .about .about-box a:hover{
      background-color: #428713;
      border: #428713 solid 1px;
     color: #fff;
@@ -1296,8 +1296,8 @@ display: block;
 .clients {
      background: #fff;
      margin-top: 90px;
-   
-} 
+
+}
 .clients .titlepage {padding-bottom: 0px;}
 .clients .titlepage h2 {
     color: #000;
@@ -1314,12 +1314,12 @@ text-align: right;
      display: flex;
      align-items: center;
      flex-wrap: wrap;
-} 
+}
 
 .cross_inner h3 {
     text-align: left;
     padding-left: 60px;
-    padding-top: 58px;   
+    padding-top: 58px;
     font-size: 30px;
     line-height: 25px;
     padding-bottom: 58px;
@@ -1331,7 +1331,7 @@ color: #fff;
     background: #fff;
 }
 .testomonial_img figure {margin: 0;}
-.testomonial_img figure img  {width: 100%;} 
+.testomonial_img figure img  {width: 100%;}
 .testomonial_img i {
 display: flex;
 justify-content: center;
@@ -1406,7 +1406,7 @@ background-size: 100%;
 
  .white_bg {
      background-color: #fff;
-     padding: 40px 30px 30px 30px 
+     padding: 40px 30px 30px 30px
 }
  .contact .titlepage {
      text-align: center;
@@ -1425,7 +1425,7 @@ background-size: 100%;
 }
  .contact .contact_bg {
     max-width: 541px;
-    
+
      padding: 0;
      padding: 60px 0px;
 }
@@ -1468,7 +1468,7 @@ transition: all 0.3s ease-in;
 /** footer **/
  .footer {
      background: #3b3b3b;
-   
+
      padding-top: 60px;
 }
 
@@ -1491,7 +1491,7 @@ padding-bottom: 20px;
      border-radius: 10px;
      padding: 20px 35px;
 }
- 
+
  .news .newslatter {
      padding: 7px 23px;
 box-shadow: inherit;
@@ -1517,7 +1517,7 @@ transition: all 0.3s ease-in;
 }
  .submit:hover {
      background: #ff7e1d;
-     
+
      color: #fff;
      transition: all 0.3s ease-in;
 
@@ -1532,7 +1532,7 @@ transition: all 0.3s ease-in;
      padding-right: 4px;
 
 }
- 
+
  ul.social_link li a img {
     width: 30px;
      height: 30px;
@@ -1548,19 +1548,19 @@ transition: all 0.3s ease-in;
 
 }
 
- 
+
 
  ul.Menu_footer li a {
      display: block;
      color: #fcfbfb;
      font-size: 17px;
-   
-    
+
+
 }
  ul.Menu_footer li a:hover{
      color: #f4b328 ;
 }
- 
+
 
  ul.loca li {
      color: #fcfbfb;
@@ -1582,7 +1582,7 @@ transition: all 0.3s ease-in;
      font-size: 18px;
      line-height: 22px;
      text-align: center;
-   
+
 }
  .copyright a {
      color: #fff;
