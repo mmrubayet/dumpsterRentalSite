@@ -1,6 +1,5 @@
 from django.contrib import admin
 from .models import State, City
-# Register your models here.
 
 class StateAdmin(admin.ModelAdmin):
     list_display = ('name', 'abbvr', 'slug')

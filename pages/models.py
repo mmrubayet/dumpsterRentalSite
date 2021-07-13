@@ -3,7 +3,6 @@ from django.template.defaultfilters import slugify
 from django.urls import reverse
 from ckeditor.fields import RichTextField
 
-# Create your models here.
 
 
 class Faq(models.Model):
@@ -12,7 +11,6 @@ class Faq(models.Model):
             'auth.user',
             on_delete=models.CASCADE,
     )
-    # answer      = models.TextField()
     answer      = RichTextField(blank=True, null=True)
 
     def __str__(self):

@@ -17,10 +17,6 @@ class HomePageView(ListView):
     template_name = 'home.html'
 
 
-# class StateDetailView(DetailView):
-#     model = State
-#     template_name = 'state_detail.html'
-
 class StateDetailView(DetailView):
     context_object_name = 'state_detail_city'
     template_name = 'state_detail.html'
@@ -30,9 +26,6 @@ class StateDetailView(DetailView):
         context = super(StateDetailView, self).get_context_data(**kwargs)
         context['states'] = State.objects.all()
         context['cities'] = City.objects.all()
-        # print(City.objects.all())
-        # print([city.city_name for city in context['cities']])
-        # print(context['object'])
         return context
 
 class CityDetailView(DetailView):
@@ -53,13 +46,11 @@ class AboutPageView(TemplateView):
 class FAQPageView(ListView):
     model = Faq
     template_name = 'faqs.html'
-    # context_object_name = 'all_faqs_list'
 
 
 class FAQDetailView(DetailView):
     model = Faq
     template_name = 'faq_detail.html'
-    # context_object_name = 'all_faqs_list'
 
 
 class ContactPageView(TemplateView):
