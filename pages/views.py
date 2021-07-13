@@ -17,6 +17,11 @@ class HomePageView(ListView):
     template_name = 'home.html'
 
 
+class StateListView(ListView):
+    model = State
+    queryset = model.objects.all().order_by('name')
+    template_name = 'state_list.html'
+
 class StateDetailView(DetailView):
     context_object_name = 'state_detail_city'
     template_name = 'state_detail.html'

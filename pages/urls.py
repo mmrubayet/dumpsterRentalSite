@@ -9,6 +9,7 @@ from .views import (
     ContactPageView,
 
     FAQDetailView,
+    StateListView,
     StateDetailView,
     CityDetailView,
     )
@@ -22,6 +23,7 @@ urlpatterns = [
     path('faqs/<int:pk>/', FAQDetailView.as_view(), name='faq_detail'),
     path('contact/', ContactPageView.as_view(), name='contact'),
 
+    path('service_area/', StateListView.as_view(), name='state_list'),
     path('<slug:slug>', StateDetailView.as_view(), name='state_detail'),
     path('city/<slug:slug>', CityDetailView.as_view(), name='city_detail'),
 
