@@ -109,19 +109,25 @@
 
   <!-- search results section -->
 
-  <section style="padding-top: 12em;">
+  <section style="padding-top: 15em;">
     <div class="container">
       <div class="row">
 
         <div class="col-md-3 states">
           <ul class="nomark" style="list-style: none; margin: 0; padding: 0; ">
-            {% for city in object_list  %}
+            {% if not object_list is None  %}
+            {% for cit in object_list  %}
             <li>
               <a href="{{ city.get_absolute_url }}">
-                <h4>{{ city.city_name }}</h4>
+                <h4>{{ cit.city_name}}</h4>
               </a>
             </li>
             {% endfor %}
+            {% else %}
+            <h2>City Not found</h2>
+
+            {% endif %}
+
           </ul>
         </div>
 
@@ -142,8 +148,8 @@
               The point of using Lorem Ipsum is that it has a more-or-less normal
             </p>
 
-            <form class="Vegetable">
-              <input class="Vegetable_fom" placeholder="Find City" type="text" name=" city_finder">
+            <form class="Vegetable" action="{% url 'search_result' %}" method="get">
+              <input class="Vegetable_fom" placeholder="Find City" type="text" name="q">
               <button class="Search_btn">Search</button>
             </form>
             <a href="#">Call Now: +8801931883880</a>

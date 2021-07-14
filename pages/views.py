@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, ListView, DetailView
+from django.db.models import Q
 
 from .models import Faq
 from state.models import State, City
@@ -42,8 +43,14 @@ class SearchResultsView(ListView):
     model = City
     template_name = 'search_result.html'
 
+
     def get_queryset(self):
-        return City.objects.filter(city_name__icontains='Adamsville')
+        query = self.request.GET.get('q')
+        object_list = City.objects.filter(city_name__icontains=query)
+        # object_list = City.objects.filter(
+        # Q(city_name__icontains=query) | Q(state_name__icontains=query) )
+        print(object_list)
+        return object_list
 
 
 class ServicesPageView(ListView):

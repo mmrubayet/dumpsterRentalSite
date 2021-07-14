@@ -212,6 +212,8 @@
 
   <!-- slider section ends-->
 
+  <!-- search section -->
+
   <section>
     <div class="container padding_dd">
       <div class="row">
@@ -227,8 +229,8 @@
               The point of using Lorem Ipsum is that it has a more-or-less normal
             </p>
 
-            <form class="Vegetable">
-              <input class="Vegetable_fom" placeholder="Find City" type="text" name=" city_finder">
+            <form class="Vegetable" action="{% url 'search_result' %}" method="get">
+              <input class="Vegetable_fom" placeholder="Find City" type="text" name="q">
               <button class="Search_btn">Search</button>
             </form>
             <a href="#">Call Now: +8801931883880</a>
@@ -237,6 +239,8 @@
       </div>
     </div>
   </section>
+
+  <!-- search section ends-->
 
   {% block content %}
   {% endblock content %}
