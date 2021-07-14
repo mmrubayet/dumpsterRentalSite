@@ -38,10 +38,19 @@ class CityDetailView(DetailView):
     template_name = 'city_detail.html'
 
 
+class SearchResultsView(ListView):
+    model = City
+    template_name = 'search_result.html'
+
+    def get_queryset(self):
+        return City.objects.filter(city_name__icontains='Adamsville')
+
+
 class ServicesPageView(ListView):
     model = State
     queryset = model.objects.all().order_by('name')
     template_name = 'services.html'
+
 
 
 class AboutPageView(TemplateView):

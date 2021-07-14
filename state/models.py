@@ -30,6 +30,9 @@ class City(models.Model):
     city_detail = RichTextField(blank=True, null=True)
     slug        = models.SlugField(null=False, unique=True)
 
+    class Meta:
+        verbose_name_plural = "cities"
+
     def __str__(self):
         return self.city_name
 

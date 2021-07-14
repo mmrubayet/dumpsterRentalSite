@@ -12,6 +12,7 @@ from .views import (
     StateListView,
     StateDetailView,
     CityDetailView,
+    SearchResultsView,
     )
 
 urlpatterns = [
@@ -26,5 +27,7 @@ urlpatterns = [
     path('service_area/', StateListView.as_view(), name='state_list'),
     path('<slug:slug>', StateDetailView.as_view(), name='state_detail'),
     path('city/<slug:slug>', CityDetailView.as_view(), name='city_detail'),
+
+    path('search/', SearchResultsView.as_view(), name='search_result'),
 
 ]
