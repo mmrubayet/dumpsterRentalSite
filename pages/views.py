@@ -46,10 +46,12 @@ class SearchResultsView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
+        if query == '':
+            # print(f'query is null')
+            query = 'Not '
+            return query
         object_list = City.objects.filter(city_name__icontains=query)
-        # object_list = City.objects.filter(
-        # Q(city_name__icontains=query) | Q(state_name__icontains=query) )
-        print(object_list)
+        print(type(object_list))
         return object_list
 
 

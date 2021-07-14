@@ -113,45 +113,52 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-md-3 states">
-          <ul class="nomark" style="list-style: none; margin: 0; padding: 0; ">
-            {% if not object_list is None  %}
-            {% for cit in object_list  %}
-            <li>
+        <div class="col text-center">
+          <!-- <ul class="nomark" style="list-style: none; margin: 0; padding: 0; "> -->
+            <div class="titlepage">
+              <h2>Search <strong class="llow"></strong>results</h2>
+            </div>
+
+            {% if object_list %}
+
+            {% for city in object_list %}
+            <!-- <li> -->
               <a href="{{ city.get_absolute_url }}">
-                <h4>{{ cit.city_name}}</h4>
+                <h4>{{ city.city_name }}, {{ city.state_name }}</h4>
               </a>
-            </li>
+            <!-- </li> -->
             {% endfor %}
             {% else %}
-            <h2>City Not found</h2>
+            <h3>Your search did not match anything.</h3>
 
             {% endif %}
 
-          </ul>
+          <!-- </ul> -->
         </div>
 
-      </div>
+      </div> <br> <br>
     </div>
     <div class="container padding_dd">
       <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
           <div class="text-cen">
 
-            <div class="titlepage">
-              <h2>Find us in <strong class="llow"></strong>your City</h2>
+            <div class="">
+              <h2>Click your city from above or search again:</h2> <br>
             </div>
 
 
-            <p>It is a long established fact that a reader will be distracted
+            <!-- <p>It is a long established fact that a reader will be distracted
               by the readable content of a page when looking at its layout.
               The point of using Lorem Ipsum is that it has a more-or-less normal
-            </p>
+            </p> -->
 
             <form class="Vegetable" action="{% url 'search_result' %}" method="get">
               <input class="Vegetable_fom" placeholder="Find City" type="text" name="q">
               <button class="Search_btn">Search</button>
             </form>
+
+            <p>Or, simply give us a call</p>
             <a href="#">Call Now: +8801931883880</a>
           </div>
         </div>
