@@ -40,6 +40,14 @@
               <div class="row card-body">
                 {% for city in object.cities.all  %}
 
+                <!--
+                {# This makes the list split into multiple columns.
+                Note: it maybe a problem if items equals to divisibleby:'10'.
+                Fix: brinf third if in second place and place the old
+                second if as an elif of new second if.
+                #}
+                -->
+
                 {% if forloop.first %}
                 <!-- {# frst column starts on first item #} -->
                 <div style="float:left;" class="col-md-4">
