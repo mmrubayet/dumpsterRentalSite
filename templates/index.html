@@ -250,12 +250,11 @@
 
   <!-- end clients -->
 
-  <!-- states viewer -->
+  <!-- states section -->
   <section>
     <div class="container jumbotron" id="jumbo">
 
       <div class="container">
-
         <div class="row">
           <div class="col-md-12">
             <div class="titlepage ">
@@ -269,17 +268,26 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-md-3 states">
-            <ul class="nomark" style="list-style: none; margin: 0; padding: 0; ">
-              {% for states in object_list  %}
-              <li>
-                <a href="{{ states.get_absolute_url }}">
-                  <h4>{{ states.name }}</h4>
-                </a>
-              </li>
-              {% endfor %}
-            </ul>
+          {% for states in object_list  %}
+
+          {% if forloop.first %}
+          <div style="float:left;" class="col-md-3">
+            {% endif %}
+            <li>
+              <a href="{{ states.get_absolute_url }}">
+                <h4>{{ states.name }}</h4>
+              </a>
+            </li>
+            {% if forloop.counter|divisibleby:13 %}
           </div>
+          <div style="float:left;" class="col-md-3">
+            {% endif %}
+            {% if forloop.last %}
+          </div>
+          {% endif %}
+
+          {% endfor %}
+          <div style="clear:both;"></div>
 
         </div>
       </div>
@@ -287,7 +295,7 @@
 
     </div>
   </section>
-  <!-- states viewer ends -->
+  <!-- states section ends -->
 
 </div>
 <!-- main div ends -->
