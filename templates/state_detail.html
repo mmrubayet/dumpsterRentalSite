@@ -1,10 +1,11 @@
 <!-- templates/state_detail.html -->
 {% extends 'base.html' %}
 {% block content %}
-<div>
+<section>
   <div class="container py-5">
 
     <div class="container jumbotron" id="jumbo">
+
       <div class="row">
         <div class="col-md-12">
           <div class="titlepage">
@@ -16,51 +17,60 @@
         </div>
       </div>
 
-    
+
 
       <div class="container">
 
-        <div class="card border-0">
+        <div class="card border-0 ">
           <h1 class="card-header border-0">Need Dumpster in {{ object.name }} ?</h1>
           <div class="card-body">
-            <p class="card-text">{{ object.article|safe }}</p>
+            <p class="card-text">{{ object.article|safe }}</p> <br> <br>
           </div>
         </div>
 
-
-
         <!-- city viewer -->
-        <section>
-          <div class="container row" id="">
+        <div class="card border-0 ">
 
+          <div class="container row card-body">
             <div class="container ">
-              <h2 class="">Cities we serve</h2>
-              <br><br>
+              <h2 class="card-header border-0">Cities we serve</h2> <br>
             </div>
-
             <!-- city list -->
-            <div class="container">
-              <div class="row">
+            <div class="container ">
+              <div class="row card-body">
+                {% for city in object.cities.all  %}
 
-                <div class="col-md-3 states">
-                  <ul class="nomark" style="list-style: none; margin: 0; padding: 0; ">
-                    {% for city in object.cities.all  %}
-                    {# {% if object.name == city.state_name %} #}
+                {% if forloop.first %}
+                <!-- {# frst column starts on first item #} -->
+                <div style="float:left;" class="col-md-4">
+                  {% endif %}
 
-                    <li> <a href="{{ city.get_absolute_url }}"> {{ city.city_name }}, {{ city.state_name }} </a> </li>
-                    {# {% endif %} #}
+                  <li>
+                    <a href="{{ city.get_absolute_url }}">
+                      <h5>
+                        {{ city.city_name }}, {{ city.state_name }}
+                      </h5>
+                    </a>
+                  </li>
 
-                    {% endfor %}
-                  </ul>
+                  {% if forloop.counter|divisibleby:10 %}
+                  <!-- {# first column ends and nexts starts #} -->
                 </div>
+                <div style="float:left;" class="col-md-4">
+                  {% endif %}
+                  {% if forloop.last %}
+                </div>
+                <!-- {# next columns ends #} -->
+                {% endif %}
 
+                {% endfor %}
 
               </div>
             </div>
             <!-- city list ends -->
 
           </div>
-        </section>
+        </div>
         <!-- city viewer ends -->
 
       </div>
@@ -68,5 +78,5 @@
     </div>
 
   </div>
-</div>
+</section>
 {% endblock content %}
