@@ -267,10 +267,18 @@
       <!-- state list -->
       <div class="container">
         <div class="row">
-
           {% for states in object_list  %}
 
+          <!--
+          {# This makes the list split into multiple columns.
+          Note: it maybe a problem if items equals to divisibleby:'10'.
+          Fix: brinf third if in second place and place the old
+          second if as an elif of new second if.
+          #}
+          -->
+
           {% if forloop.first %}
+          <!-- {# frst column starts on first item #} -->
           <div style="float:left;" class="col-md-3">
             {% endif %}
             <li>
@@ -279,11 +287,13 @@
               </a>
             </li>
             {% if forloop.counter|divisibleby:13 %}
+            <!-- {# first column ends and nexts starts #} -->
           </div>
           <div style="float:left;" class="col-md-3">
             {% endif %}
             {% if forloop.last %}
           </div>
+          <!-- {# next columns ends #} -->
           {% endif %}
 
           {% endfor %}
