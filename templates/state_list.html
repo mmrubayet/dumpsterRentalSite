@@ -5,41 +5,56 @@
 
 
 
-  <!-- states section -->
-  <section>
-    <div class="container " >
+<!-- states section -->
+<section>
+  <div class="container ">
 
-      <div class="row">
-        <div class="col-md-12">
-          <div class="titlepage ">
-            <h2>See all states we serve </h2> <br>
-            <p class="lead">We serve acrros all states all of the major cities. Please go through the list below.</p>
-          </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="titlepage ">
+          <h2>See all states we serve </h2> <br>
+          <p class="lead">We serve acrros all states all of the major cities. Please go through the list below.</p>
         </div>
       </div>
+    </div>
 
-      <div class="row">
-
-      </div>
-
-
-
-        <div class="card border-0 ">
-          <div class="card-body">
-            {% for states in object_list %}
-            <a class="states" href="{{ states.get_absolute_url }}">
-              <h4>{{ states.name }}</h4>
-            </a>
-            {% endfor %}
-          </div>
-        </div>
-
-        <br>
-
+    <div class="row">
 
     </div>
-  </section>
 
-  <!-- states section ends -->
+
+    <!-- state list -->
+    <div class="container">
+      <div class="row">
+
+        {% for states in object_list  %}
+
+        {% if forloop.first %}
+        <div style="float:left;" class="col-md-3">
+          {% endif %}
+          <li>
+            <a href="{{ states.get_absolute_url }}">
+              <h4>{{ states.name }}</h4>
+            </a>
+          </li>
+          {% if forloop.counter|divisibleby:13 %}
+        </div>
+        <div style="float:left;" class="col-md-3">
+          {% endif %}
+          {% if forloop.last %}
+        </div>
+        {% endif %}
+
+        {% endfor %}
+        <div style="clear:both;"></div>
+
+      </div>
+    </div>
+    <!-- state list ends -->
+
+  </div>
+</section>
+
+<!-- states section ends -->
 
 {% endblock content %}
