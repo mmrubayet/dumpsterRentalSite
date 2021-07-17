@@ -37,9 +37,10 @@ class City(models.Model):
         return self.city_name
 
     def get_absolute_url(self):
-        return reverse('city_detail', kwargs={'slug': self.slug})
+        return reverse('city_detail', kwargs={'slug': self.slug, 'state': self.state_name})
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.title+self.state_name)
+            self.slug = slugify(self.title)
+
         return super().save(*args, **kwargs)
