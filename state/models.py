@@ -37,7 +37,7 @@ class City(models.Model):
         return self.city_name
 
     def get_absolute_url(self):
-        return reverse('city_detail', kwargs={'slug': self.slug, 'state': self.state_name})
+        return reverse('city_detail', kwargs={'slug': self.slug, 'state': self.state_name.slug})
 
     def save(self, *args, **kwargs):
         if not self.slug:
