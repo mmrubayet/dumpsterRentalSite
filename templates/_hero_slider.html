@@ -3,16 +3,20 @@
 
 <!-- slider section -->
 
-  <section class="slider_section">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <!-- carousel-inner -->
-        <div class="carousel-item active">
+<section class="slider_section ">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- carousel-inner -->
+    <div class="carousel-inner mt-5" style="background-image: url('{% static 'images/banner2.jpg' %}'); background-repeat: no-repeat; background-size: cover; ">
+      <div class="" >
+
+
+
+        <div class="carousel-item active" style="background: rgb(240, 240, 240); background: rgba(240, 240, 240, 0.4); color: #f1f1f1;  width: 100%;">
 
           <div class="container-fluid padding_dd">
             <div class="carousel-caption">
@@ -21,7 +25,10 @@
                   <div class="text-bg">
                     <span>Welcome To OUR SITE</span>
                     <h1>Dumpster Rental</h1>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal </p>
+                    <p>It is a long established fact that a reader will be
+                      distracted by the readable content of a page when looking
+                      at its layout. The point of using Lorem Ipsum is that
+                      it has a more-or-less normal </p>
 
                     <a href="{% url 'contact' %}">Contact Us</a> <a href="tel:+8801931883880">Call Now</a>
                   </div>
@@ -36,7 +43,7 @@
           </div>
         </div>
 
-        <div class="carousel-item">
+        <div class="carousel-item" style="background: rgb(240, 240, 240); background: rgba(240, 240, 240, 0.4); color: #f1f1f1;  width: 100%;">
 
           <div class="container-fluid padding_dd">
             <div class="carousel-caption">
@@ -63,8 +70,7 @@
 
         </div>
 
-
-        <div class="carousel-item">
+        <div class="carousel-item" style="background: rgb(240, 240, 240); background: rgba(240, 240, 240, 0.4); color: #f1f1f1;  width: 100%;">
 
           <div class="container-fluid padding_dd">
             <div class="carousel-caption ">
@@ -88,19 +94,21 @@
           </div>
         </div>
 
-      </div> <!-- carousel-inner ends -->
+      </div>
 
-      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
+    </div> <!-- carousel-inner ends -->
 
-      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
 
-    </div>
-  </section>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
 
-  <!-- slider section ends-->
+  </div>
+</section>
+
+<!-- slider section ends-->
