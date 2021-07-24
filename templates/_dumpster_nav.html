@@ -1,0 +1,55 @@
+<!-- _dumpster_nav/base.html -->
+{% load static %}
+<!-- Dumster Navbar -->
+    <div class="header-top" style="z-index: 999;">
+      <div class="header fixed-top" style="z-index: 999;">
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-11">
+              <div class=" float-right">
+                <li>Call Now <a href="tel:+8801931883880"> <strong class="llow">+8801931883880</strong></a> </li>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row"  style="z-index: 999;">
+
+            <div class="col-xl-2 col-lg-4 col-md-4 col-sm-3 col logo_section">
+              <div class="full">
+                <div class="center-desk">
+                  <div class="logo">
+                    <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" alt="#" /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-10 col-lg-8 col-md-8 col-sm-9">
+              <div class="menu-area">
+                <div class="limit-box">
+                  <nav class="main-menu ">
+                    <ul class="menu-area-main">
+                      <li class=" "> <a href="{% url 'home' %}">Home</a> </li>
+                      <li> <a href="{% url 'state_list' %}">States We Serve</a> </li>
+                      <li> <a href="{% url 'services' %}">Our Services</a> </li>
+                      <li> <a href="{% url 'about' %}">About Us</a> </li>
+                      <li> <a href="{% url 'faqs' %}">FAQ's</a> </li>
+                      <li> <a href="{% url 'contact' %}">Contact</a> </li>
+
+                      <!-- <li> <a href="#"><img src="icon/icon_b.png" alt="#" /></a></li> -->
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <!-- menu-area ends -->
+            </div>
+          </div>
+        </div>
+        <!-- container-fluid ends -->
+      </div>
+      <!-- header fixed-top ends -->
+    </div>
+    <!-- header-top ends -->
+    <!-- end Dumster Navbar -->
