@@ -1,4 +1,4 @@
-.states  {
+.states {
   text-decoration: none;
   color: black;
   font-family: 'Roboto', sans-serif;
@@ -22,7 +22,9 @@
 }
 
 .nomarkul {
-  list-style: none; margin: 0; padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 #jumbo {
@@ -163,9 +165,7 @@ footer ul li a:hover {
 }
 
 /* footer ends */
-
 /* for services */
-
 section {
   padding-top: 4rem;
   padding-bottom: 5rem;
@@ -231,8 +231,6 @@ p {
 }
 
 /* services ends */
-
-
 /* contact page */
 font-family: 'Roboto', sans-serif;
 
