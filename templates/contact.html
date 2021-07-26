@@ -9,6 +9,7 @@
   <!-- contact -->
   <div id="contact" class="contact">
     <div class="container">
+
       <div class="row">
         <div class="col-md-12">
           <div class="titlepage">
@@ -17,11 +18,28 @@
             <p class="lead">Get in touch with us.</p> <br><br>
           </div>
         </div>
-
       </div>
+
       <div class="white_color">
         <div class="row">
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+            <form class="contact_bg" action="" method="post">
+               {% csrf_token %}
+               <div class="row">
+                 <div class="col-md-12">
+
+                   {{ form }}
+
+                 </div>
+
+                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                   <button class="send">Send</button>
+                 </div>
+               </div>
+
+               <input type="submit" value="Send">
+            </form>
+
             <form class="contact_bg">
 
               <div class="row">

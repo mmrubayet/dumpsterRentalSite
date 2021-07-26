@@ -73,7 +73,3 @@ class FAQPageView(ListView):
 class FAQDetailView(DetailView):
     model = Faq
     template_name = 'faq_detail.html'
-
-
-class ContactPageView(TemplateView):
-    template_name = 'contact.html'
