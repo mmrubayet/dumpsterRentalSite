@@ -23,7 +23,7 @@
 
         <div class="card border-0">
 
-          <a class="states" href=" {% url 'faq_detail' faq.pk %}">
+          <a class="states" href=" {{ faq.get_absolute_url }} ">
             <h2 class="card-header border-0">{{ faq.question }} </h2>
           </a>
 

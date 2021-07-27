@@ -2,9 +2,9 @@ from django.contrib import admin
 from .models import Faq
 
 
-class PagesAdmin(admin.ModelAdmin):
-    list_display = ('name', 'abbvr', 'article',)
-    prepopulated_fields = {'slug': ('name',)}
+class FaqAdmin(admin.ModelAdmin):
+    list_display = ('question', 'author', 'slug')
+    prepopulated_fields = {'slug': ('question',)}
 
 
-admin.site.register(Faq)
+admin.site.register(Faq, FaqAdmin)

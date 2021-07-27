@@ -12,9 +12,16 @@ class Faq(models.Model):
             on_delete=models.CASCADE,
     )
     answer      = RichTextField(blank=True, null=True)
+    slug        = models.SlugField(null=True, unique=True)
+
 
     def __str__(self):
         return self.question
 
     def get_absolute_url(self):
-        return reverse('faq_detail', args=[str(self.id)])
+        return reverse('faq_detail', kwargs={'slug': self.slug})
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.question)
+        return super().save(*args, **kwargs)
